@@ -41,7 +41,7 @@
     if ( password_verify( $_POST['password'], $target['password'] ) ) {
         // セッションidを新規作成（上書き）
         session_regenerate_id(true);
-        $_SESSION['EMAIL'] = $_POST['password'];
+        $_SESSION['EMAIL'] = $_POST['email'];
         echo "ログイン成功";
     } else {
         echo "ログイン失敗";

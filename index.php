@@ -1,8 +1,17 @@
 <?php
 
+function h($s){
+  return htmlspecialchars($s, ENT_QUOTES, 'utf-8');
+}
+
+
 session_start();
 
-var_dump(session_id());
+if ( isset( $_SESSION['EMAIL'] ) ) {
+    echo "ようこそ!!". $_SESSION['EMAIL'] . "さん";
+    echo '<a href="logout.php">ログアウトはこちらへ</a> ';
+    exit;
+}
 
 
  ?>
