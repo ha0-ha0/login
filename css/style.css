@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/******************************************
+login form css
+*******************************************/
+
+
+.nico {
+    font-family: "Nico Moji";
+}
+#mainWrap {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    background-color: #45F1BE;;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px gray;
+}
+/* .tabContents */
+.tabContents {
+    display: flex;
+    list-style-type: none;
+}
+.tabContents .tabTit {
+    width: 50%;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 5px 0px grey;
+    background-color: #fff;
+}
+.tabContents .tabTit:first-of-type {
+    -webkit-border-radius: 10px 0px 0px 0px / 10px 0px 0px 0px;
+    -moz-border-radius: 10px 0px 0px 0px / 10px 0px 0px 0px;
+    border-radius: 10px 0px 0px 0px / 10px 0px 0px 0px;
+}
+.tabContents .tabTit:nth-of-type(2) {
+    -webkit-border-radius: 0px 10px 0px 0px / 0px 10px 0px 0px;
+    -moz-border-radius: 0px 10px 0px 0px / 0px 10px 0px 0px;
+    border-radius: 0px 10px 0px 0px / 0px 10px 0px 0px;
+}
+.tabContents .tabTit.active {
+    background-color: #45F1BE;
+    color: #fff;
+    box-shadow:0px 0px #000;
+}
+.tabContents .tabTit p {
+    font-size: 2.5em;
+}
+
+/* .mainContents */
+.mainContents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainContents .loginArea,
+.mainContents .signUpArea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+}
+.loginArea .tit,
+.signUpArea .tit {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.loginArea .tit {
+    margin-top: 40px;
+}
+.signUpArea .tit {
+    margin-top: 20px;
+}
+.loginArea form input,
+.signUpArea form input {
+    padding: 0 10px;
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 0px auto;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+.loginArea form input {
+    margin-bottom: 30px;
+}
+.signUpArea form input {
+    margin-bottom: 15px;
+}
+.signUpArea form p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+/*.signUpArea form input[name^="password"] {
+    margin-bottom: 20px;
+}*/
+.loginArea form button,
+.signUpArea form button {
+    margin: auto;
+    border-radius: 5px;
+    display: block;
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #000;
+    color: #45F1BE;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px grey;
+}
+.loginArea form button:hover,
+.signUpArea form button:hover {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+    box-shadow: none;
+}
+
+
+/* fade-in & fade-out */
+.fade-enter-active, .fade-leave-active {
+  transition: all .6s ease;
+  opacity: 1;
+}
+.fade-enter,
+.fade-leave-active,
+.fade-leave{
+  opacity: 0;
+}
+
+
+/* 小デバイス（横向きモバイル, 576px 以下） */
+@media (max-width: 576px) {
+    #mainWrap {
+        height: 80vw;
+    }
+}
+
+/* 中デバイス（タブレット, 768px 以上） */
+@media (min-width: 568px) {
+    body {
+        min-width: 1000px;
+    }
+}
